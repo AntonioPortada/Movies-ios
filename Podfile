@@ -7,6 +7,6 @@ target 'Movies' do
 
   # Pods for Movies
     pod 'FirebaseFirestore'
-    pod 'FirebaseFirestore'
+    pod 'FirebaseAuth'
 
 end
