@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MovieCollectionViewCell" customModule="Movies" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="317" height="561"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="317" height="561"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6La-o6-QFZ">
+                        <rect key="frame" x="3" y="3" width="311" height="555"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="kws-qX-Xap">
+                                <rect key="frame" x="3" y="3" width="305" height="549"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="megan" translatesAutoresizingMaskIntoConstraints="NO" id="HZz-2H-Uaz">
+                                        <rect key="frame" x="0.0" y="0.0" width="305" height="402"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="jYn-Ed-vF9">
+                                        <rect key="frame" x="0.0" y="402" width="305" height="147"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Megan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VaC-D8-N7z">
+                                                <rect key="frame" x="126.33333333333333" y="0.0" width="52.333333333333329" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24 Mayo 2023" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gwb-fE-Jli">
+                                                <rect key="frame" x="97.333333333333343" y="23.333333333333314" width="110.33333333333334" height="20.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Hom-Ug-uzP">
+                                                <rect key="frame" x="0.0" y="46.666666666666679" width="305" height="100.33333333333331"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kws-qX-Xap" firstAttribute="top" secondItem="6La-o6-QFZ" secondAttribute="top" constant="3" id="4Rh-LR-Jbv"/>
+                            <constraint firstItem="kws-qX-Xap" firstAttribute="leading" secondItem="6La-o6-QFZ" secondAttribute="leading" constant="3" id="5bb-bY-yuw"/>
+                            <constraint firstAttribute="trailing" secondItem="kws-qX-Xap" secondAttribute="trailing" constant="3" id="Y9r-23-4uw"/>
+                            <constraint firstAttribute="bottom" secondItem="kws-qX-Xap" secondAttribute="bottom" constant="3" id="uZ1-CV-4BT"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="6La-o6-QFZ" secondAttribute="bottom" constant="3" id="X4v-cA-nGs"/>
+                <constraint firstAttribute="trailing" secondItem="6La-o6-QFZ" secondAttribute="trailing" constant="3" id="g2p-1d-F7E"/>
+                <constraint firstItem="6La-o6-QFZ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="3" id="q5z-3V-Jpr"/>
+                <constraint firstItem="6La-o6-QFZ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="3" id="wwY-kV-ZA0"/>
+            </constraints>
+            <size key="customSize" width="317" height="561"/>
+            <connections>
+                <outlet property="dateMovie" destination="gwb-fE-Jli" id="JMq-sz-YEE"/>
+                <outlet property="descriptionMovie" destination="Hom-Ug-uzP" id="oW6-sO-HR8"/>
+                <outlet property="posterMovie" destination="HZz-2H-Uaz" id="a7l-h7-mxe"/>
+                <outlet property="titleMovie" destination="VaC-D8-N7z" id="MML-wi-FhQ"/>
+            </connections>
+            <point key="canvasLocation" x="277.09923664122135" y="168.66197183098592"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="megan" width="279" height="402"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

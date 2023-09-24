@@ -13,8 +13,16 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var txtUser: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
 
+    let defaults = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if defaults.string(forKey: "sesionIniciada") != nil {
+            self.performSegue(withIdentifier: "loginGoToHomeSegue", sender: self)
+        }
     }
 
     // MARK: - IBAction
