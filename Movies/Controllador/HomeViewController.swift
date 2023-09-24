@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseAuth
+import Kingfisher
 
 class HomeViewController: UIViewController {
 
@@ -14,10 +15,10 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     // MARK: - variables locales
-    var peliculas: [DataMovie] = []
-    
     let defaults = UserDefaults.standard
     let manager = MoviesManager()
+    
+    var peliculas: [DataMovie] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,9 +30,9 @@ class HomeViewController: UIViewController {
         
         defaults.set("logueado", forKey: "sesionIniciada")
         
-        manager.getPopularMovies { listado in
-            print("número de pelīculas: \(listado.count)")
-        }
+        getPeliculas()
+        
+        
     }
     
     // MARK: IBAction
@@ -47,6 +48,14 @@ class HomeViewController: UIViewController {
         }
     }
     
+    private func setupCollection() {
+        collectionView.collectionViewLayout = UICollectionViewFlowLayout()
+        
+        if let flowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            flowLayout.scrollDirection = .horizontal
+        }
+    }
+    
     func goToLogin() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
@@ -55,6 +64,16 @@ class HomeViewController: UIViewController {
         viewController.modalTransitionStyle = .crossDissolve
         
         self.present(viewController, animated: true)
+    }
+    
+    func getPeliculas() {
+        manager.getPopularMovies { listado in
+            self.peliculas = listado
+            
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
+        }
     }
 }
 
@@ -67,6 +86,21 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let celda = collectionView.dequeueReusableCell(withReuseIdentifier: "celda", for: indexPath) as! MovieCollectionViewCell
         
-        celda.posterMovie = 
+        if let url = URL(string: "\(Constants.urlImages)\(peliculas[indexPath.row].poster_path!)") {
+            celda.posterMovie.kf.setImage(with: url)
+        }
+        
+        celda.titleMovie.text = peliculas[indexPath.row].title
+        celda.dateMovie.text = peliculas[indexPath.row].release_date
+        celda.descriptionMovie.text = peliculas[indexPath.row].overview
+        
+        return celda
+    }
+}
+
+// MARK: -
+extension HomeViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 195, height: 320)
     }
 }

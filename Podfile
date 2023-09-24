@@ -8,5 +8,7 @@ target 'Movies' do
   # Pods for Movies
     pod 'FirebaseFirestore'
     pod 'FirebaseAuth'
+    
+    pod 'Kingfisher', '~> 7.0'
 
 end

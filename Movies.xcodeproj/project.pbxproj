@@ -12,6 +12,7 @@
 		81063DD52ABD3D710080D848 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81063DD32ABD3D710080D848 /* MovieCollectionViewCell.swift */; };
 		81063DD62ABD3D710080D848 /* MovieCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81063DD42ABD3D710080D848 /* MovieCollectionViewCell.xib */; };
 		816EDF852AB15A3C0027F94B /* RegistroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816EDF842AB15A3C0027F94B /* RegistroViewController.swift */; };
+		81A7418E2AC0D6D800E99FB9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A7418D2AC0D6D800E99FB9 /* Constants.swift */; };
 		81A9C2B12AA9792000E6A27A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81A9C2B02AA9792000E6A27A /* GoogleService-Info.plist */; };
 		81BFAA332AB3EADC004FE4C0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BFAA322AB3EADC004FE4C0 /* HomeViewController.swift */; };
 		81C49B442AAAB9A300E46FC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81C49B432AAAB9A300E46FC6 /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 		81063DD32ABD3D710080D848 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
 		81063DD42ABD3D710080D848 /* MovieCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCollectionViewCell.xib; sourceTree = "<group>"; };
 		816EDF842AB15A3C0027F94B /* RegistroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroViewController.swift; sourceTree = "<group>"; };
+		81A7418D2AC0D6D800E99FB9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		81A9C2B02AA9792000E6A27A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		81BFAA322AB3EADC004FE4C0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		81C49B432AAAB9A300E46FC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				81A9C2B02AA9792000E6A27A /* GoogleService-Info.plist */,
 				81C49B452AAABD6300E46FC6 /* UIVIew+Extension.swift */,
 				81063DCD2ABD36CB0080D848 /* MoviesManager.swift */,
+				81A7418D2AC0D6D800E99FB9 /* Constants.swift */,
 			);
 			path = Movies;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				81063DD12ABD37620080D848 /* MovieDataModel.swift in Sources */,
 				81C49B462AAABD6300E46FC6 /* UIVIew+Extension.swift in Sources */,
 				816EDF852AB15A3C0027F94B /* RegistroViewController.swift in Sources */,
+				81A7418E2AC0D6D800E99FB9 /* Constants.swift in Sources */,
 				81CF8EC92AA03D1B00051A23 /* SceneDelegate.swift in Sources */,
 				81063DD52ABD3D710080D848 /* MovieCollectionViewCell.swift in Sources */,
 				81BFAA332AB3EADC004FE4C0 /* HomeViewController.swift in Sources */,
